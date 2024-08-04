@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-10 pb-2">
+    <span class="mat-h2 pt-4">Signup Account</span>
+  </div>
+  <div class="row pb-3">
+    <div class="col-12">
+      <mat-divider></mat-divider>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <form name="form" novalidate>
+      <div class="col-6">
+        <mat-form-field class="w-full" outline>
+          <mat-label>First Name</mat-label>
+          <input matInput name="firstName" placeholder="Enter first name" maxlength="250" [(ngModel)]="model.firstName"
+          #firstName="ngModel" required>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field class="w-full" outline>
+          <mat-label>Last Name</mat-label>
+          <input matInput name="lastName" placeholder="Enter last name" maxlength="250" [(ngModel)]="model.lastName"
+          #lastName="ngModel" required>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field class="w-full" outline>
+          <mat-label>Email</mat-label>
+          <input matInput name="email" placeholder="Enter your email" maxlength="250" [(ngModel)]="model.email"
+          #email="ngModel" required>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field class="w-full" outline>
+          <mat-label>Phone</mat-label>
+          <input matInput name="phone" placeholder="Enter your phone" maxlength="250" [(ngModel)]="model.phone"
+          #phone="ngModel" required>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field class="w-full" outline> 
+            <mat-label>Password</mat-label>
+          <input matInput name="password" placeholder="Enter your password" maxlength="250" [(ngModel)]="model.password"
+            #password="ngModel" required>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field class="w-full" outline> 
+            <mat-label>Confirm Password</mat-label>
+          <input matInput name="confirmPassword" placeholder="Enter password again" maxlength="250" [(ngModel)]="model.confirmPassword"
+            #confirmPassword="ngModel" required>
+        </mat-form-field>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12 text-right">
+          <button type="button" mat-raised-button class="mr-2"> 
+            <span class="text-primary"  [routerLink]="['/account/login']">Login</span>
+          </button>
+          <button type="submit" (click)="submit()" mat-raised-button color="primary">
+            <mat-icon>save</mat-icon> Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
